@@ -1,4 +1,4 @@
-const db = require('../../data/dbConfig')
+const db = require('../../data/dbConfig.js')
 
 module.exports = {
     addUser,
@@ -15,4 +15,7 @@ function getUser(username){
     return db('users').where({username}).first();
 }
 
-function findBy(username)
+function findBy(username){
+    return db('users')
+    .select('id','username','role').where('username', username).first()
+}
