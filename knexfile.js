@@ -15,6 +15,5 @@ const sharedConfig = {
         ...sharedConfig,//copying & using sharedConfig info
         connection: { filename: './data/fitness_test.db3' },
       },
-  
   };
   

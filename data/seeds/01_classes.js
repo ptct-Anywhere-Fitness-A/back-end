@@ -1,6 +1,4 @@
 exports.seed = function(knex) {
-    return knex('classes').del()
-    .then(function () {
         return knex('classes').insert([
             {
                 class_name:'Hiking',
@@ -9,8 +7,8 @@ exports.seed = function(knex) {
                 duration:'1 hour',
                 start_time:'9:00 am',
                 location: 'Radnor Lake',
-                number_of_attendees: 28,
-                max_class_size: 30
+                number_of_attendees: 9,
+                max_class_size: 15
             },
             {
                 class_name:'Zumba',
@@ -44,5 +42,4 @@ exports.seed = function(knex) {
             }
 
         ])
-    })
 }
