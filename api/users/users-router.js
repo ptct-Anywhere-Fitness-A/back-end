@@ -1,10 +1,9 @@
 const router = require('express').Router();
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+//importing functions from the users-model
 const Users = require('./users-model');
 
-router.get("/", (req, res) => {
-    res.json({
-        message: "Users router is running"
-    });
-});
+
 
 module.exports = router;
