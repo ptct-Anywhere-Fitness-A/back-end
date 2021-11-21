@@ -17,7 +17,7 @@ app.use("/api/classes", classesRouter);
 app.use("/api/users", usersRouter);
 
 app.get("/", (req, res) => {
-    res.json({
+    res.status(200).json({
         message: "Welcome to the ptct-Anywhere-Fitness API"
     })
 })
