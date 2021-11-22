@@ -2,7 +2,7 @@
 exports.up = function(knex) {
     return knex.schema
     .createTable('classes', (tbl) =>{
-        tbl.increments('class_id');
+        tbl.increments('id');        
         tbl.string('class_name', 128).notNullable();
         tbl.string('class_type', 128).notNullable()
         tbl.string('intensity_level', 128).notNullable();
@@ -17,7 +17,7 @@ exports.up = function(knex) {
         tbl.string('username', 128).unique().notNullable();
         tbl.string('password', 128).notNullable();
         tbl.string('role').notNullable();
-        tbl.integer('class_id').references('class_id').inTable('classes');
+        tbl.integer('class_id').references('id').inTable('classes');
     })
 };
 
